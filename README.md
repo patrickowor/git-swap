@@ -8,56 +8,49 @@ change with the selected record.
 
 Because apparently having one Git history wasn't enough.
 
-- 🔄 **Multiple Git histories, one folder**
+- *"I have 4 remotes and I hate all of them."*
 
-  Same files, completely different Git universes. Because copying the entire
-  project was apparently too reasonable.
-- 🕵️ **Escape `git blame`**
+    Instead of doing `git remote` yoga every time you want to switch between `fork-a`, `fork-b`, and `upstream`, just rotate the `.git` and boom: new history, same files, no drama.
 
-  Sometimes you don't want to know who wrote that line. Sometimes you
-  definitely don't want Git to know either.
-- 🏢 **Work vs personal Git**
+- *"My repo is possessed."*
 
-  Same codebase, different Git history. Keep your side quests separate from
-  your day job.
-- 🌍 **Public vs private history**
+    `git fsck` comes back looking like a crime scene report? Don't perform an exorcism. Just swap in a `.git` that isn't cursed and pretend the last one never happened.
 
-  Publish the code without publishing the entire archaeological dig that
-  produced it.
-- 👥 **One codebase, multiple clients**
+- *"I need this exact codebase to lie about where it came from, twice a day, in CI."*
 
-  Same files, different repositories. Everyone gets their own little reality.
-- 🧪 **Experiment with Git without ruining everything**
+    Testing against staging and prod histories back to back? Rotate, test, rotate, test. It's basically repo cosplay.
 
-  Rewrite history. Delete branches. Do something horrifying with `rebase`.
-  Your other `.git` can sit quietly and pretend nothing happened.
-- 🧹 **Fresh history without touching the files**
+- *"We moved platforms and I refuse to re-download 40GB."*
 
-  Sometimes you just want the code without dragging along 4,000 commits of
-  "fix typo".
-- 🔐 **Stop pushing to the wrong remote**
+    GitHub to GitLab migration? Keep every byte on disk, just rotate in the new `.git` and let it think it's always lived there.
 
-  Different `.git` directories mean different remotes. Because apparently
-  checking `git remote -v` was too much work.
-- 🎭 **Different Git identities**
+- *"I have uncommitted changes and a repo the size of a moon."*
 
-  One history for Serious Professional You(TM) and another for You Who Commits
-  at 2 AM.
-- 🚀 **Keep completely separate project timelines**
+    Keep your precious WIP files, attach them to a much smaller, less bloated `.git`. Nobody has to know about the 200,000-commit history you left behind.
 
-  Production, experiments, demos, forks, customer versions, questionable
-  prototypes. Same working tree, different timelines.
-- 💾 **Keep alternate realities around**
+- *"I want a 'good' version and a 'chaos' version of the same project."*
 
-  Your files stay the same. Your Git history changes. It's basically multiverse
-  theory, but for software projects.
-- 🧯 **Do stupid Git experiments safely**
+    Keep `.git.clean` and `.git.sandbox` around and rotate between them depending on your mood, deadline, or life choices.
 
-  Keep a backup `.git` somewhere and go absolutely feral in the other one.
-- 🧠 **Because Git is weird**
+- *"I did a history rewrite and I have deep regret."*
 
-  Git Rotate is a practical demonstration that your files and your Git history
-  are actually two different things that just happen to live together.
+    `filter-repo` went sideways? Don't cry. Rotate back to your pre-rewrite backup like it never happened. Instant time travel, no witnesses.
+
+- *"I want to A/B test my hooks without losing my mind."*
+
+    Different hooks, different LFS config, different submodules. Rotate through them on the same files like trying on outfits before a date.
+
+- *"I need read-only mode real quick."*
+
+    Swap from your push-happy fork `.git` to a look-but-don't-touch upstream `.git`. Your WIP stays put, your permissions get humbled.
+
+- *"I `rsync`'d my files and now I need a `.git` real fast."*
+
+    Slap on a shallow `.git` instead of doing a full clone over hotel Wi-Fi. Speed beats completeness.
+
+
+Git Rotate is a practical demonstration that your files and your Git history
+are actually two different things that just happen to live together.
 
 ## The elevator pitch
 
