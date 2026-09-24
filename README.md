@@ -8,6 +8,15 @@ change with the selected record.
 
 Because apparently having one Git history wasn't enough.
 
+- *"Escape git blame"*
+
+    Sometimes you don't want to know who wrote that line. Sometimes you definitely don't want Git to know either.
+
+- *"Do stupid Git experiments safely"*
+
+    Keep a backup .git somewhere and go absolutely feral in the other one.
+
+
 - *"I have 4 remotes and I hate all of them."*
 
     Instead of doing `git remote` yoga every time you want to switch between `fork-a`, `fork-b`, and `upstream`, just rotate the `.git` and boom: new history, same files, no drama.
